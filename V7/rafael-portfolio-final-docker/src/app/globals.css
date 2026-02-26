@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/*
+  Design tokens via CSS vars (funciona em light/dark).
+  Dica: ajuste aqui se quiser um dark mais claro/escuro.
+*/
+:root {
+  --bg: 248 250 252; /* slate-50 */
+  --fg: 15 23 42; /* slate-900 */
+  --muted: 71 85 105; /* slate-600 */
+
+  --card: 255 255 255;
+  --card2: 248 250 252;
+  --border: 203 213 225; /* slate-300 */
+
+  --accent: 99 102 241; /* indigo-500 */
+  --accent2: 16 185 129; /* emerald-500 */
+  --accent3: 14 165 233; /* sky-500 */
+}
+
+.dark {
+  /* dark mais claro (menos “preto”) e com contraste confortável */
+  --bg: 17 24 39; /* #111827 */
+  --fg: 226 232 240; /* slate-200 */
+  --muted: 148 163 184; /* slate-400 */
+
+  --card: 30 41 59; /* slate-800 */
+  --card2: 17 24 39; /* gray-900 */
+  --border: 71 85 105; /* slate-600 */
+
+  --accent: 129 140 248; /* indigo-400 */
+  --accent2: 52 211 153; /* emerald-400 */
+  --accent3: 56 189 248; /* sky-400 */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--fg));
+  background:
+    radial-gradient(900px circle at 15% 10%, rgba(var(--accent) / 0.18), transparent 60%),
+    radial-gradient(700px circle at 85% 0%, rgba(var(--accent3) / 0.14), transparent 55%),
+    radial-gradient(900px circle at 85% 90%, rgba(var(--accent2) / 0.10), transparent 60%),
+    rgb(var(--bg));
+}
+
+::selection {
+  background: rgba(var(--accent) / 0.25);
+}
+
+/* Focus rings bonitos */
+:focus-visible {
+  outline: 2px solid rgba(var(--accent) / 0.65);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* ====== micro animações (CSS) ====== */
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.06);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.98);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+/* marquee andando para a DIREITA (track duplicado) */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* micro animação vertical nos chips da barra inferior */
+@keyframes dockbob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dock-bob {
+  animation: dockbob 3.2s ease-in-out infinite;
+}
+
+.floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.blob {
+  animation: blob 18s ease-in-out infinite;
+}
+
+/* grid discreta para dar textura (sem pesar) */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(var(--fg) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--fg) / 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(60% 60% at 50% 0%, black 60%, transparent 100%);
+}
+
+/* ====== marquee (carrossel de logos) ====== */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-right 26s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+  .dock-bob {
+    animation: none;
+  }
+}

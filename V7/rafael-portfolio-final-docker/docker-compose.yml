@@ -1,0 +1,7 @@
+services:
+  portfolio:
+    build: .
+    container_name: rafael-portfolio
+    ports:
+      - "8080:80"
+    restart: unless-stopped
