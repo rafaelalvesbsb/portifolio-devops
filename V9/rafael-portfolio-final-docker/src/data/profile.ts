@@ -160,8 +160,10 @@ export const profile: Profile = {
   ],
 
   summary: [
+    "Sou um profissional de infraestrutura e operações com foco em AWS, apaixonado por resolver desafios complexos e otimizar ambientes de TI.",
+    "Sou certifico em AWS como Arquiteto de Soluções e com experiência prática em ambientes cloud e on‑premises, automação e observabilidade.",
     "Analista de Infraestrutura Cloud e On‑Premises com foco em AWS (SysOps/DevOps), redes e observabilidade.",
-    "Experiência prática com ambientes containerizados (ECS/Fargate, EKS/Kubernetes), automações Serverless (Lambda/EventBridge/SQS) e IaC (Terraform/CloudFormation).",
+    "Experiência prática com ambientes em pipelines CI/CD e containerizados (ECS/Fargate, EKS/Kubernetes), automações Serverless (Lambda/EventBridge/SQS) e IaC (Terraform/CloudFormation).",
     "Atuação em migração/modernização (Windows & Linux) e em operações com visibilidade ponta‑a‑ponta (CloudWatch, Zabbix, Grafana), incluindo alertas/reporting em Slack.",
   ],
   featuredVideos: [
