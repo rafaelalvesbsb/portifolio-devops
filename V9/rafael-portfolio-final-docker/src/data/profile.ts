@@ -294,9 +294,9 @@ export const profile: Profile = {
   experiences: [
         {
       company: "AGF",
-      role: "Analista Cloud Pleno - AWS",
-      period: "Mar/2024 — Nov/2024 (9 meses)",
-      location: "Brasília/DF",
+      role: "Analista Cloud Senior - DevOps - FinOps - Observabilidade - AWS",
+      period: "Dez/2024 — Atualmente (1 ano e 3 meses)",
+      location: "São Paulo/SP (100% remoto)",
       highlights: [
         "Operação e implementação de serviços AWS (gerenciados e não gerenciados) com foco em disponibilidade, segurança e padrões.",
         "Suporte a CI/CD e plataformas de containers: ECS - Elastic Compute Cloude GitHub.",
@@ -315,7 +315,7 @@ export const profile: Profile = {
       company: "NuageIT",
       role: "Analista Cloud Pleno - AWS",
       period: "Mar/2024 — Nov/2024 (9 meses)",
-      location: "Brasília/DF",
+      location: "Brasília/DF 100% remoto",
       highlights: [
         "Operação e implementação de serviços AWS (gerenciados e não gerenciados) com foco em disponibilidade, segurança e padrões.",
         "Suporte a CI/CD e plataformas de containers: EKS/Kubernetes, Rancher, GitLab e GitHub.",
@@ -332,9 +332,9 @@ export const profile: Profile = {
       company: "At Hand Tecnologia",
       role: "Analista Cloud Pleno - AWS",
       period: "Out/2023 — Abr/2024 (7 meses)",
-      location: "São Luís/MA",
+      location: "São Luís/MA - 100% remoto",
       highlights: [
-        "Atuei como Analista na parte de Parceiria com a AWS, contrução de SDPs (AWS Config, EC2 for Windows Server, Systems Manager)"
+        "Atuei como Analista na parte de Parceiria com a AWS, contrução de SDPs (AWS Config, EC2 for Windows Server, Systems Manager)",
         "Levantamento de requisitos e execução de migração On‑Premises → AWS (Windows e Linux).",
         "Migração VMware (.ova) para EC2 com ajustes de rede, storage e segurança.",
         "Reestruturação de VPC e conectividade: SG, NACL, Route Tables, NAT, IGW, VGW, VPN e VPC Peering.",
@@ -353,7 +353,7 @@ export const profile: Profile = {
       company: "Triscal",
       role: "Consultor Arquiteto Cloud",
       period: "Jan/2023 — Out/2023 (10 meses)",
-      location: "Rio de Janeiro/RJ",
+      location: "Rio de Janeiro/RJ - 100% remoto",
       highlights: [
         "Arquitetura de soluções e planejamento de migração On‑Premises → AWS.",
         "Integração de serviços locais com AWS e desenho de arquitetura alvo.",
@@ -365,7 +365,7 @@ export const profile: Profile = {
       company: "Configr",
       role: "Analista de Cloud Hosting",
       period: "Set/2021 — Jan/2023 (1 ano e 5 meses)",
-      location: "Brasília/DF",
+      location: "Brasília/DF - 100% remoto",
       highlights: [
         "Suporte avançado a Linux (Ubuntu) e automações via Shell Script.",
         "Troubleshooting em aplicações web: NGINX, OpenLiteSpeed, PHP, WordPress e Moodle.",
