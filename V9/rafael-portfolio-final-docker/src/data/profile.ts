@@ -124,7 +124,7 @@ export const profile: Profile = {
   headline:
     "AWS SysOps | Arquiteto de Soluções | FinOps | DevOps | Linux | Observabilidade",
   location: "Distrito Federal, Brasil",
-  email: "rafaelalvesbsbinfra@gmail.com",
+  email: "rafaelalvescloud@gmail.com",
   phoneE164: "+5561991646471",
   whatsappPrefill:
     "Olá Rafael! Vi seu portfólio e gostaria de falar sobre um projeto/posição em Cloud/DevOps.",
@@ -143,12 +143,12 @@ export const profile: Profile = {
     },
     {
       label: "Instagram",
-      href: "https://instagram.com/SEU_USUARIO",
+      href: "https://www.instagram.com/rafaelalvesbsb/",
       icon: "instagram",
     },
     {
       label: "TikTok",
-      href: "https://tiktok.com/@SEU_USUARIO",
+      href: "https://www.tiktok.com/@rafaelalvesbsb",
       icon: "tiktok",
     },
     {
@@ -161,7 +161,7 @@ export const profile: Profile = {
 
   summary: [
     "Analista de Infraestrutura Cloud e On‑Premises com foco em AWS (SysOps/DevOps), redes e observabilidade.",
-    "Experiência prática com ambientes containerizados (ECS/Fargate, EKS/Kubernetes), automações Serverless (Lambda/EventBridge) e IaC (Terraform/CloudFormation).",
+    "Experiência prática com ambientes containerizados (ECS/Fargate, EKS/Kubernetes), automações Serverless (Lambda/EventBridge/SQS) e IaC (Terraform/CloudFormation).",
     "Atuação em migração/modernização (Windows & Linux) e em operações com visibilidade ponta‑a‑ponta (CloudWatch, Zabbix, Grafana), incluindo alertas/reporting em Slack.",
   ],
   featuredVideos: [
@@ -292,6 +292,25 @@ export const profile: Profile = {
   ],
 
   experiences: [
+        {
+      company: "AGF",
+      role: "Analista Cloud Pleno - AWS",
+      period: "Mar/2024 — Nov/2024 (9 meses)",
+      location: "Brasília/DF",
+      highlights: [
+        "Operação e implementação de serviços AWS (gerenciados e não gerenciados) com foco em disponibilidade, segurança e padrões.",
+        "Suporte a CI/CD e plataformas de containers: ECS - Elastic Compute Cloude GitHub.",
+        "Operação de ambiente Ci/CD com integração GitHub a esteira de pipelne AWS Code Pipeline + CodeBuild → ECS/Fargate.",
+        "Operação e controle com serverless (Lambda e EventBridge) para automações, integrações e notificações.",
+        "Reestruturação de redes (VPC) e conectividade entre contas; aplicação de boas práticas de segurança e governança.",
+        "Implementações e operação: SES, SNS, CloudWatch, automações e integrações serverless.",
+        "FinOps: análises de Billing/Cost e CloudCheckr; documentação e diagramas de arquitetura.",
+        "Monitoramento com CloudWatch, Zabbix e Grafana",
+        "Sustetação de serviços e infraestrutura AWS de instancias EC2, incluindo troubleshooting atualização de S.O.",
+        "Atuação como analista Linux, suporte a aplicações web (NGINX, OpenLiteSpeed, PHP) e bancos MySQL/MariaDB.",
+        "Sistemas operacionais: Amazon Linux 2, Ubuntu Server e Windows Server, RHEL",
+      ],
+    },
     {
       company: "NuageIT",
       role: "Analista Cloud Pleno - AWS",
@@ -304,6 +323,9 @@ export const profile: Profile = {
         "Implementações e operação: SES, SNS, CloudWatch e Cognito; automações e integrações serverless.",
         "FinOps: análises de Billing/Cost e CloudCheckr; documentação e diagramas de arquitetura.",
         "Monitoramento com Zabbix e Grafana; atuação como analista Linux.",
+        "Sustetação de serviços e infraestrutura AWS de instancias EC2, incluindo troubleshooting atualização de S.O.",
+        "Atuação como analista Linux, suporte a aplicações web (NGINX, OpenLiteSpeed, PHP) e bancos MySQL/MariaDB.",
+        "Sistemas operacionais: Amazon Linux 2, Ubuntu Server e Windows Server, RHEL",
       ],
     },
     {
@@ -312,15 +334,23 @@ export const profile: Profile = {
       period: "Out/2023 — Abr/2024 (7 meses)",
       location: "São Luís/MA",
       highlights: [
+        "Atuei como Analista na parte de Parceiria com a AWS, contrução de SDPs (AWS Config, EC2 for Windows Server, Systems Manager)"
         "Levantamento de requisitos e execução de migração On‑Premises → AWS (Windows e Linux).",
         "Migração VMware (.ova) para EC2 com ajustes de rede, storage e segurança.",
         "Reestruturação de VPC e conectividade: SG, NACL, Route Tables, NAT, IGW, VGW, VPN e VPC Peering.",
         "Automação com Lambda e EventBridge (rotinas, integrações e notificações).",
-        "Provisionamento com CloudFormation (VPC/EC2) e boas práticas de governança.",
+        "Operação e controle com serverless (Lambda e EventBridge) para automações, integrações e notificações.",
+        "Reestruturação de redes (VPC) e conectividade entre contas; aplicação de boas práticas de segurança e governança.",
+        "Implementações e operação: SES, SNS, CloudWatch, automações e integrações serverless.",
+        "FinOps: análises de Billing/Cost e CloudCheckr; documentação e diagramas de arquitetura.",
+        "Monitoramento com CloudWatch, Zabbix e Grafana",
+        "Sustetação de serviços e infraestrutura AWS de instancias EC2, incluindo troubleshooting atualização de S.O.",
+        "Atuação como analista Linux, suporte a aplicações web (NGINX, OpenLiteSpeed, PHP) e bancos MySQL/MariaDB.",
+        "Sistemas operacionais: Amazon Linux 2, Ubuntu Server e Windows Server, RHEL",
       ],
     },
     {
-      company: "Consultoria (Projeto)",
+      company: "Triscal",
       role: "Consultor Arquiteto Cloud",
       period: "Jan/2023 — Out/2023 (10 meses)",
       location: "Rio de Janeiro/RJ",
