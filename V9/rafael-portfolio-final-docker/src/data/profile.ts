@@ -174,7 +174,7 @@ export const profile: Profile = {
   ],
 
   galleryPhotos: [
-    { src: "/gallery/infra-01.jpg", alt: "Infra / Cloud - 01" },
+    { src: "/gallery/infra-01.png", alt: "Infra / Cloud - 01" },
     { src: "/gallery/infra-02.jpg", alt: "Infra / Cloud - 02" },
     { src: "/gallery/infra-03.jpg", alt: "Infra / Cloud - 03" },
     { src: "/gallery/infra-04.jpg", alt: "Infra / Cloud - 04" },
