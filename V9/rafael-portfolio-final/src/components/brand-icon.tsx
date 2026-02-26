@@ -63,6 +63,10 @@ export function BrandIcon({
     );
   }
 
+  // Alguns ícones (ex.: GitHub) são quase pretos e "somem" no tema escuro.
+  // Para esses casos, usamos monocromático (currentColor) para garantir contraste.
+  const useColored = colored && iconKey !== "siGithub";
+
   return (
     <span
       title={icon.title}
@@ -73,7 +77,7 @@ export function BrandIcon({
     >
       <span
         className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] transition group-hover:scale-[1.02]"
-        style={colored ? { color: `#${icon.hex}` } : undefined}
+        style={useColored ? { color: `#${icon.hex}` } : undefined}
         aria-hidden="true"
       >
         <svg

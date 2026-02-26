@@ -28,6 +28,9 @@ export function SimpleIconMark({
   const icon = getIcon(iconKey);
   if (!icon) return null;
 
+  // GitHub é quase preto e some no tema escuro — usa monocromático.
+  const useColored = colored && iconKey !== "siGithub";
+
   return (
     <span
       className={cn(
@@ -36,7 +39,7 @@ export function SimpleIconMark({
       )}
       title={title ?? icon.title}
       aria-hidden="true"
-      style={colored ? { color: `#${icon.hex}` } : undefined}
+      style={useColored ? { color: `#${icon.hex}` } : undefined}
     >
       <svg width={size} height={size} viewBox="0 0 24 24" role="img">
         <path d={icon.path} fill="currentColor" />

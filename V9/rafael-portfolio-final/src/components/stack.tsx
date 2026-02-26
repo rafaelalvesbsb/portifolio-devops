@@ -91,7 +91,7 @@ export function Stack() {
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {filtered.map((s) => (
-              <AwsChip key={`${s.group}-${s.label}`} abbr={s.abbr} label={s.label} />
+              <AwsChip key={`${s.group}-${s.label}`} abbr={s.abbr} label={s.label} iconUrl={s.iconUrl} />
             ))}
           </div>
 

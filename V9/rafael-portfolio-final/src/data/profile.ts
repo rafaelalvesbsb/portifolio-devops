@@ -80,6 +80,8 @@ export type AwsService = {
   label: string;
   /** abreviação exibida no chip */
   abbr: string;
+  /** ícone do serviço (PNG 64px) */
+  iconUrl?: string;
   group:
     | "Compute & Containers"
     | "Serverless & Integration"
@@ -221,50 +223,43 @@ export const profile: Profile = {
     },
   ],
 
-  // Lista explícita dos serviços AWS (para chips + filtro)
+  // Lista explícita dos serviços AWS (chips + filtro)
   awsServices: [
-    // Compute & Containers
-    { label: "Amazon EC2", abbr: "EC2", group: "Compute & Containers" },
-    { label: "Amazon ECS", abbr: "ECS", group: "Compute & Containers" },
-    { label: "AWS Fargate", abbr: "Farg", group: "Compute & Containers" },
-    { label: "Amazon EKS", abbr: "EKS", group: "Compute & Containers" },
-    { label: "Amazon ECR", abbr: "ECR", group: "Compute & Containers" },
-    { label: "Elastic Load Balancing (ALB/NLB)", abbr: "ELB", group: "Compute & Containers" },
-    { label: "Auto Scaling", abbr: "ASG", group: "Compute & Containers" },
+    { label: "Amazon EC2", abbr: "EC2", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Compute/64/png5x/EC2.png", group: "Compute & Containers" },
+    { label: "Amazon ECS", abbr: "ECS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Containers/64/png5x/Elastic-Container-Service.png", group: "Compute & Containers" },
+    { label: "AWS Fargate", abbr: "Farg", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Containers/64/png5x/Fargate.png", group: "Compute & Containers" },
+    { label: "Amazon EKS", abbr: "EKS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Containers/64/png5x/Elastic-Kubernetes-Service.png", group: "Compute & Containers" },
+    { label: "Amazon ECR", abbr: "ECR", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Containers/64/png5x/Elastic-Container-Registry.png", group: "Compute & Containers" },
+    { label: "Elastic Load Balancing (ALB/NLB)", abbr: "ELB", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/Elastic-Load-Balancing.png", group: "Compute & Containers" },
+    { label: "Auto Scaling", abbr: "ASG", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Management-Governance/64/png5x/Auto-Scaling.png", group: "Compute & Containers" },
 
-    // Serverless & Integration
-    { label: "AWS Lambda", abbr: "λ", group: "Serverless & Integration" },
-    { label: "Amazon EventBridge", abbr: "EVB", group: "Serverless & Integration" },
-    { label: "Amazon SNS", abbr: "SNS", group: "Serverless & Integration" },
-    { label: "Amazon SQS", abbr: "SQS", group: "Serverless & Integration" },
-    { label: "Amazon SES", abbr: "SES", group: "Serverless & Integration" },
+    { label: "AWS Lambda", abbr: "λ", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Compute/64/png5x/Lambda.png", group: "Serverless & Integration" },
+    { label: "Amazon EventBridge", abbr: "EVB", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/App-Integration/64/png5x/EventBridge.png", group: "Serverless & Integration" },
+    { label: "Amazon SNS", abbr: "SNS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/App-Integration/64/png5x/Simple-Notification-Service.png", group: "Serverless & Integration" },
+    { label: "Amazon SQS", abbr: "SQS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/App-Integration/64/png5x/Simple-Queue-Service.png", group: "Serverless & Integration" },
+    { label: "Amazon SES", abbr: "SES", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Business-Applications/64/png5x/Simple-Email-Service.png", group: "Serverless & Integration" },
 
-    // Networking
-    { label: "Amazon VPC", abbr: "VPC", group: "Networking" },
-    { label: "Site‑to‑Site / Client VPN", abbr: "VPN", group: "Networking" },
-    { label: "VPC Peering", abbr: "Peer", group: "Networking" },
-    { label: "Route 53", abbr: "R53", group: "Networking" },
-    { label: "Amazon CloudFront", abbr: "CF", group: "Networking" },
+    { label: "Amazon VPC", abbr: "VPC", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/Virtual-Private-Cloud.png", group: "Networking" },
+    { label: "Site‑to‑Site / Client VPN", abbr: "VPN", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/Client-VPN.png", group: "Networking" },
+    { label: "VPC Peering", abbr: "Peer", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/Virtual-Private-Cloud.png", group: "Networking" },
+    { label: "Route 53", abbr: "R53", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/Route-53.png", group: "Networking" },
+    { label: "Amazon CloudFront", abbr: "CF", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Networking-Content-Delivery/64/png5x/CloudFront.png", group: "Networking" },
 
-    // Storage & Databases
-    { label: "Amazon S3", abbr: "S3", group: "Storage & Databases" },
-    { label: "Amazon EFS", abbr: "EFS", group: "Storage & Databases" },
-    { label: "Amazon RDS", abbr: "RDS", group: "Storage & Databases" },
+    { label: "Amazon S3", abbr: "S3", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Storage/64/png5x/Simple-Storage-Service.png", group: "Storage & Databases" },
+    { label: "Amazon EFS", abbr: "EFS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Storage/64/png5x/EFS.png", group: "Storage & Databases" },
+    { label: "Amazon RDS", abbr: "RDS", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Database/64/png5x/RDS.png", group: "Storage & Databases" },
 
-    // Security
-    { label: "IAM", abbr: "IAM", group: "Security" },
-    { label: "AWS Certificate Manager", abbr: "ACM", group: "Security" },
-    { label: "AWS Secrets Manager", abbr: "ASM", group: "Security" },
+    { label: "IAM", abbr: "IAM", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Security-Identity-Compliance/64/png5x/Identity-and-Access-Management.png", group: "Security" },
+    { label: "AWS Certificate Manager", abbr: "ACM", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Security-Identity-Compliance/64/png5x/Certificate-Manager.png", group: "Security" },
+    { label: "AWS Secrets Manager", abbr: "ASM", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Security-Identity-Compliance/64/png5x/Secrets-Manager.png", group: "Security" },
 
-    // Observability
-    { label: "Amazon CloudWatch", abbr: "CW", group: "Observability" },
-    { label: "CloudWatch Logs Insights", abbr: "QL", group: "Observability" },
+    { label: "Amazon CloudWatch", abbr: "CW", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Management-Governance/64/png5x/CloudWatch.png", group: "Observability" },
+    { label: "CloudWatch Logs Insights", abbr: "QL", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Management-Governance/64/png5x/CloudWatch.png", group: "Observability" },
 
-    // DevTools
-    { label: "AWS CodePipeline", abbr: "CP", group: "DevTools" },
-    { label: "AWS CodeBuild", abbr: "CB", group: "DevTools" },
-    { label: "AWS CodeDeploy", abbr: "CD", group: "DevTools" },
-    { label: "AWS CloudFormation", abbr: "CFN", group: "DevTools" },
+    { label: "AWS CodePipeline", abbr: "CP", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/64/png5x/CodePipeline.png", group: "DevTools" },
+    { label: "AWS CodeBuild", abbr: "CB", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/64/png5x/CodeBuild.png", group: "DevTools" },
+    { label: "AWS CodeDeploy", abbr: "CD", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/64/png5x/CodeDeploy.png", group: "DevTools" },
+    { label: "AWS CloudFormation", abbr: "CFN", iconUrl: "https://www.awsicon.com/static/images/Service-Icons/Management-Governance/64/png5x/CloudFormation.png", group: "DevTools" },
   ],
 
   // Logos / tecnologias (Simple Icons)
